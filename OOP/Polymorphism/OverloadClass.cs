@@ -1,5 +1,6 @@
 namespace Polymorphism;
 
+//Compile-Time Polymorphism
 public class OverloadClass
 {
     public int Add(int a, int b) => a + b;

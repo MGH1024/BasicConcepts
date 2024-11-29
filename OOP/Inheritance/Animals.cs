@@ -1,6 +1,6 @@
-namespace Inheritence;
+namespace Inheritance;
 
-// Parent
+// کلاس پایه (والد)
 public class Animal
 {
     public string Name { get; set; }
@@ -17,7 +17,7 @@ public class Animal
     }
 }
 
-//child one
+// کلاس فرزند 1
 public class Bird : Animal
 {
     public void Fly()
@@ -26,7 +26,7 @@ public class Bird : Animal
     }
 }
 
-//child two
+// کلاس فرزند 2
 public class Fish : Animal
 {
     public void Swim()
@@ -35,7 +35,7 @@ public class Fish : Animal
     }
 }
 
-//child three
+// کلاس فرزند 3
 public class Dog : Animal
 {
     public void Bark()
