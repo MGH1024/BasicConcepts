@@ -7,19 +7,19 @@ namespace Encapsulation;
 public class BankAccount
 {
     // Private fields to store account details
-    private string accountHolder;
-    private double balance;
+    private  string _accountHolder;
+    private double _balance;
 
     // Public property to get and set the account holder name
     public string AccountHolder
     {
-        get { return accountHolder; }
+        get => _accountHolder;
         set
         {
             // Validation can be added here
             if (!string.IsNullOrEmpty(value))
             {
-                accountHolder = value;
+                _accountHolder = value;
             }
             else
             {
@@ -34,8 +34,8 @@ public class BankAccount
         // Validation can be added here
         if (amount > 0)
         {
-            balance += amount;
-            Console.WriteLine($"{amount:C} deposited successfully. Current balance: {balance:C}");
+            _balance += amount;
+            Console.WriteLine($"{amount:C} deposited successfully. Current balance: {_balance:C}");
         }
         else
         {
@@ -47,10 +47,10 @@ public class BankAccount
     public void Withdraw(double amount)
     {
         // Validation can be added here
-        if (amount > 0 && amount <= balance)
+        if (amount > 0 && amount <= _balance)
         {
-            balance -= amount;
-            Console.WriteLine($"{amount:C} withdrawn successfully. Current balance: {balance:C}");
+            _balance -= amount;
+            Console.WriteLine($"{amount:C} withdrawn successfully. Current balance: {_balance:C}");
         }
         else
         {
@@ -61,6 +61,6 @@ public class BankAccount
     // Public method to get the current balance
     public double GetBalance()
     {
-        return balance;
+        return _balance;
     }
 }
